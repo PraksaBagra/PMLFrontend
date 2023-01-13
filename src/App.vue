@@ -1,13 +1,24 @@
 <template>
   <div id="app">
+    <header-item />
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
     <router-view />
-    
+    <footer-item />
   </div>
 </template>
+<script>
+import FooterItem from "./components/HeaderItem.vue";
+import HeaderItem from "./components/FooterItem.vue";
+export default {
+  components: {
+    FooterItem,
+    HeaderItem,
+  },
+};
+</script>
 
 <style>
 #app {
